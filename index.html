@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mar y Sazón | Caldosas y Ceviches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/50622223333" target="_blank"><i class="fab fa-whatsapp"></i> Pedir</a>
+</div>
+
+<header>
+    <h1>Ceviche costarricense y caldosa de pescado</h1>
+    <p>Los mejores sabores del mar</p>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container" id="menu">
+    <h2>Nuestros platillos</h2>
+
+    <div class="platillo">
+        <img src="img/caldosa-pescado.jpg" alt="Caldosa de pescado">
+        <div class="info">
+            <h3>Caldosa de pescado con yuca</h3>
+            <p>Sopa espesa con pescado fresco, yuca, plátano verde.</p>
+            <div class="precio">₡6.500</div>
+            <button class="btn-pedir" data-plato="Caldosa de pescado">Pedir</button>
+        </div>
+    </div>
+
+    <div class="platillo">
+        <img src="img/caldosa-camarones.jpg" alt="Caldosa de camarones con leche de coco">
+        <div class="info">
+            <h3>Caldosa de camarones con leche de coco</h3>
+            <p>Camarones, leche de coco, cilantro y especias.</p>
+            <div class="precio">₡7.900</div>
+            <button class="btn-pedir" data-plato="Caldosa de camarones">Pedir</button>
+        </div>
+    </div>
+
+    <div class="platillo">
+        <img src="img/ceviche.jpg" alt="Ceviche costarricense">
+        <div class="info">
+            <h3>Ceviche costarricense de corvina</h3>
+            <p>Pescado fresco con limón, cebolla, cilantro y salsa de tomate.</p>
+            <div class="precio">₡5.200</div>
+            <button class="btn-pedir" data-plato="Ceviche">Pedir</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="contacto">
+    <h2>Contacto</h2>
+    <form id="formContacto">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo" required>
+        <textarea id="mensaje" rows="3" placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="feedback"></div>
+</div>
+
+<footer>
+    <p>Mar y Sazón | Tel: 2222-3333</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
