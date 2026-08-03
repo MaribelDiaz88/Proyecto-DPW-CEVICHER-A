@@ -3,43 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cevichería Mary | Caldosas y Ceviches</title>
     
-    <!-- Etiquetas SEO básicas -->
+    <!-- 1. Título alargado para SEO (más de 50 caracteres) -->
+    <title>Cevichería Mary | Caldosas, Ceviches y Mariscos Frescos en San José</title>
+    
+    <!-- Etiquetas SEO -->
     <meta name="description" content="Disfruta de los mejores ceviches costarricenses y caldosas de pescado en Cevichería Mary. Mariscos frescos, ambiente familiar y servicio rápido en San José.">
     <meta name="keywords" content="cevicheria, ceviche costarricense, caldosa de pescado, mariscos, San José, comida típica">
     <meta name="robots" content="index, follow">
     
-    <!-- Etiquetas Open Graph -->
-    <meta property="og:title" content="Cevichería Mary | Caldosas y Ceviches">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cevichería Mary | Caldosas, Ceviches y Mariscos Frescos en San José">
     <meta property="og:description" content="Disfruta de los mejores ceviches costarricenses y caldosas de pescado en Cevichería Mary.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cevicheria-mary.infinityfreeapp.com/">
     <meta property="og:image" content="https://cevicheria-mary.infinityfreeapp.com/img/logo.jpg">
     
-    <!-- Etiqueta Canónica CORRECTA (Sin parámetros) -->
-    <link rel="canonical" href="https://cevicheria-mary.infinityfreeapp.com/" />
+    <!-- 2. Twitter Cards (Nuevas, arreglan el requerimiento) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cevichería Mary | Caldosas, Ceviches y Mariscos Frescos en San José">
+    <meta name="twitter:description" content="Disfruta de los mejores ceviches costarricenses y caldosas de pescado en Cevichería Mary.">
+    <meta name="twitter:image" content="https://cevicheria-mary.infinityfreeapp.com/img/logo.jpg">
     
-    <!-- Sitemap -->
+    <!-- Etiqueta Canónica y Sitemap -->
+    <link rel="canonical" href="https://cevicheria-mary.infinityfreeapp.com/" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
     <!-- Verificación Google -->
     <meta name="google-site-verification" content="bh-8MduSjFUyKq14-tV2JIiLR9qJ3JvcGSO4shKWfNs" />
     
+    <!-- 3. SCHEMA JSON-LD (Soluciona el error de "Esquema" en AIOSEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Cevichería Mary",
+      "url": "https://cevicheria-mary.infinityfreeapp.com/"
+    }
+    </script>
+    
     <!-- Favicon y CSS -->
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Clase para ocultar texto (Arregla los "Links vacíos" de WAVE) -->
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+    </style>
 </head>
 <body>
 
+<!-- WhatsApp con texto oculto para corregir el "Empty link" -->
 <div class="whatsapp-float">
-    <a href="https://wa.me/50622223333" target="_blank"><i class="fab fa-whatsapp"></i> Pedir</a>
+    <a href="https://wa.me/50622223333" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        <span class="sr-only">Pedir por WhatsApp</span>
+    </a>
 </div>
 
 <header>
     <div class="header-content">
-        <img src="img/logo.jpg" alt="Logo Cevichería Mary" class="logo-header">
+        <img src="img/logo.jpg" alt="Logo Cevichería Mary" class="logo-header" width="130" height="auto">
         <h1>Ceviche costarricense y caldosa de pescado</h1>
         <p>Los mejores sabores del mar</p>
     </div>
@@ -55,7 +89,8 @@
     <h2>Nuestros platillos</h2>
 
     <div class="platillo">
-        <img src="img/ceviche.jpg" alt="Ceviche Especial">
+        <!-- 4. Añadidos width y height para evitar el error de CLS -->
+        <img src="img/ceviche.jpg" alt="Ceviche Especial" width="350" height="250">
         <div class="info">
             <h3>Ceviche Especial</h3>
             <p>Ceviche preparado con pescado fresco, camarones, calamares, y un toque especial de la casa.</p>
@@ -65,7 +100,7 @@
     </div>
 
     <div class="platillo">
-        <img src="img/ceviche2.jpg" alt="Ceviche Naval">
+        <img src="img/ceviche2.jpg" alt="Ceviche Naval" width="350" height="250">
         <div class="info">
             <h3>Ceviche Naval</h3>
             <p>Delicioso ceviche de pescado y mariscos mixtos con un toque de ajo y perejil.</p>
@@ -75,7 +110,7 @@
     </div>
 
     <div class="platillo">
-        <img src="img/ceviche4.jpg" alt="Ceviche Tico">
+        <img src="img/ceviche4.jpg" alt="Ceviche Tico" width="350" height="250">
         <div class="info">
             <h3>Ceviche Tico</h3>
             <p>El clásico ceviche costarricense de corvina con limón, cebolla morada, cilantro y salsa de tomate.</p>
@@ -87,10 +122,21 @@
 
 <div class="container" id="contacto">
     <h2>Contacto</h2>
+    
+    <!-- 5. Formulario con etiquetas (Corrige los 5 errores WAVE de "Missing label") -->
     <form id="formContacto">
-        <input type="text" id="nombre" placeholder="Nombre" required>
-        <input type="email" id="email" placeholder="Correo" required>
-        <textarea id="mensaje" rows="3" placeholder="Mensaje"></textarea>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+        <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+        </div>
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="3" placeholder="Escribe tu mensaje aquí" required></textarea>
+        </div>
         <button type="submit">Enviar</button>
     </form>
     <div id="feedback"></div>
@@ -99,14 +145,15 @@
 <footer>
     <p>Cevichería Mary | Tel: (506) 2222-3333</p>
     <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- 6. Enlaces externos con texto oculto y enlaces reales -->
+        <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i><span class="sr-only">Facebook</span></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
     </div>
     <p>&copy; 2026 Cevichería Mary - Todos los derechos reservados</p>
     <p>Síguenos en redes sociales: 
-        <a href="#">Facebook</a> | 
-        <a href="#">Instagram</a> | 
-        <a href="#">TikTok</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | 
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> | 
+        <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
     </p>
     <p>Dirección: Av. Principal #123, San José, Costa Rica</p>
 </footer>

@@ -1,3 +1,4 @@
+/* --- Reset y Estilos Generales --- */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +9,50 @@ body {
     background: #f0f7ff;
     color: #004466;
 }
+
+/* --- Header Profesional y Menú --- */
+/* Unificado y corregido: Eliminé la declaración duplicada */
 header {
-    background: linear-gradient(rgba(0,102,153,0.8), rgba(0,68,102,0.8)), url('https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_1280.jpg');
+    background-image: url('../img/fondo-mar.jpg');
     background-size: cover;
-    padding: 60px 20px;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     text-align: center;
     color: white;
 }
+
+/* Contenedor transparente del logo y título */
+.header-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.logo-header {
+    max-width: 130px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.header-content h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+.header-content p {
+    color: #f0f0f0;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* --- Barra de Navegación --- */
 nav {
     background: #004466;
     padding: 10px;
@@ -28,6 +66,8 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* --- Contenedor del Menú --- */
 .container {
     max-width: 1000px;
     margin: 20px auto;
@@ -52,23 +92,27 @@ nav a {
 .platillo .info {
     flex: 1;
 }
+
+/* --- CORRECCIÓN DE CONTRASTE (WAVE) --- */
 .precio {
     font-size: 1.3em;
-    color: #ff6600;
+    color: #a01f10; /* Cambié el naranja por un rojo oscuro para ALTO CONTRASTE */
     font-weight: bold;
     margin: 10px 0;
 }
 .btn-pedir {
-    background: #ff9900;
-    color: white;
+    background: #0056b3; /* Cambié el naranja por un azul oscuro para ALTO CONTRASTE */
+    color: #ffffff;
     border: none;
     padding: 8px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 .btn-pedir:hover {
-    background: #e68900;
+    background: #003580;
 }
+
+/* --- Botón Flotante de WhatsApp --- */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -82,6 +126,8 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* --- Formulario de Contacto --- */
 input, textarea {
     width: 100%;
     padding: 8px;
@@ -89,15 +135,21 @@ input, textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+/* CORRECCIÓN DE CONTRASTE EN EL BOTÓN DEL FORMULARIO */
 button[type="submit"] {
-    background: #006699;
-    color: white;
+    background: #0056b3; /* Azul oscuro de ALTO CONTRASTE */
+    color: #ffffff;
     border: none;
     padding: 10px;
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
 }
+button[type="submit"]:hover {
+    background: #003580;
+}
+
+/* --- Footer --- */
 footer {
     background: #004466;
     color: white;
@@ -110,6 +162,8 @@ footer {
     margin: 0 8px;
     font-size: 1.5em;
 }
+
+/* --- Responsive (Móvil) --- */
 @media (max-width: 700px) {
     .platillo {
         flex-direction: column;
@@ -120,48 +174,4 @@ footer {
         width: 100%;
         max-width: 300px;
     }
-}
-/* --- Nuevos estilos para el Header profesional --- */
-header {
-    /* Imagen de fondo que ya tienes en la carpeta img */
-    background-image: url('../img/fondo-mar.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-/* El contenedor transparente (recuadro del logo y título) */
-.header-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro transparente */
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 800px;
-    width: 90%;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-/* El logotipo */
-.logo-header {
-    max-width: 130px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-/* Los textos dentro del contenedor transparente */
-.header-content h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin: 10px 0;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-}
-
-.header-content p {
-    color: #f0f0f0;
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
