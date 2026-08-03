@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://cevicheria-mary.infinityfreeapp.com/">
     <meta property="og:image" content="https://cevicheria-mary.infinityfreeapp.com/img/logo.jpg">
     
-    <!-- 2. Twitter Cards (Nuevas, arreglan el requerimiento) -->
+    <!-- 2. Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cevichería Mary | Caldosas, Ceviches y Mariscos Frescos en San José">
     <meta name="twitter:description" content="Disfruta de los mejores ceviches costarricenses y caldosas de pescado en Cevichería Mary.">
@@ -32,7 +32,7 @@
     <!-- Verificación Google -->
     <meta name="google-site-verification" content="bh-8MduSjFUyKq14-tV2JIiLR9qJ3JvcGSO4shKWfNs" />
     
-    <!-- 3. SCHEMA JSON-LD (Soluciona el error de "Esquema" en AIOSEO) -->
+    <!-- 3. SCHEMA JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,7 +47,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <!-- ¡ESTA ES LA LÍNEA QUE FALTABA! (El enlace a tu CSS) -->
+    <!-- Enlace al CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
     <style>
@@ -61,21 +61,34 @@
             clip: rect(0,0,0,0);
             border: 0;
         }
+        /* Estilo extra para que el texto "Pedir" del botón de WhatsApp se vea bien */
+        .wa-text {
+            display: inline;
+            margin-left: 5px;
+        }
+        .whatsapp-float i {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
 
-<!-- WhatsApp con texto oculto para corregir el "Empty link" -->
+<!-- WhatsApp con texto visible y oculto para accesibilidad -->
 <div class="whatsapp-float">
     <a href="https://wa.me/50622223333" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
         <span class="sr-only">Pedir por WhatsApp</span>
+        <span class="wa-text">Pedir</span>
     </a>
 </div>
 
 <header>
     <div class="header-content">
-        <img src="img/logo.webp" alt="Logo Cevichería Mary" class="logo-header" width="130" height="auto">
+        <!-- Logo con etiqueta picture para compatibilidad WebP/JPG -->
+        <picture>
+            <source srcset="img/logo.webp" type="image/webp">
+            <img src="img/logo.jpg" alt="Logo Cevichería Mary" class="logo-header" width="130" height="auto">
+        </picture>
         <h1>Ceviche costarricense y caldosa de pescado</h1>
         <p>Los mejores sabores del mar</p>
     </div>
@@ -91,7 +104,11 @@
     <h2>Nuestros platillos</h2>
 
     <div class="platillo">
-        <img src="img/ceviche 1.webp" alt="Ceviche Especial" width="350" height="250">
+        <!-- CORRECCIÓN: etiqueta picture con WebP y fallback JPG -->
+        <picture>
+            <source srcset="img/ceviche-especial.webp" type="image/webp">
+            <img src="img/ceviche-especial.jpg" alt="Ceviche Especial" width="350" height="250">
+        </picture>
         <div class="info">
             <h3>Ceviche Especial</h3>
             <p>Ceviche preparado con pescado fresco, camarones, calamares, y un toque especial de la casa.</p>
@@ -101,7 +118,10 @@
     </div>
 
     <div class="platillo">
-        <img src="img/ceviche_especial.webp" alt="Ceviche Naval" width="350" height="250">
+        <picture>
+            <source srcset="img/ceviche-naval.webp" type="image/webp">
+            <img src="img/ceviche-naval.jpg" alt="Ceviche Naval" width="350" height="250">
+        </picture>
         <div class="info">
             <h3>Ceviche Naval</h3>
             <p>Delicioso ceviche de pescado y mariscos mixtos con un toque de ajo y perejil.</p>
@@ -111,7 +131,10 @@
     </div>
 
     <div class="platillo">
-        <img src="img/ceviche_3.webp" alt="Ceviche Tico" width="350" height="250">
+        <picture>
+            <source srcset="img/ceviche-tico.webp" type="image/webp">
+            <img src="img/ceviche-tico.jpg" alt="Ceviche Tico" width="350" height="250">
+        </picture>
         <div class="info">
             <h3>Ceviche Tico</h3>
             <p>El clásico ceviche costarricense de corvina con limón, cebolla morada, cilantro y salsa de tomate.</p>
