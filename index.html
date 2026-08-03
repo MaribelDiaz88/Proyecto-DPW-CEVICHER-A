@@ -47,28 +47,43 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <!-- Enlace al CSS -->
+    <!-- Enlace al CSS (por si acaso) -->
     <link rel="stylesheet" href="css/styles.css">
-    
+
+    <!-- ESTILOS FORZADOS PARA ARREGLAR LOS ERRORES DE CONTRASTE DEFINITIVAMENTE -->
     <style>
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            border: 0;
-        }
+        /* Arregla los enlaces vacíos y el texto del WhatsApp */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
         .wa-text { display: inline; margin-left: 5px; }
         .whatsapp-float i { font-size: 1.2rem; }
         
-        /* CORRECCIÓN DE CONTRASTE PARA WAVE: Texto negro sobre fondo verde */
+        /* FORZADO: Texto negro sobre fondo verde (Arregla el contraste de WAVE) */
         .whatsapp-float a {
-            color: #000000;
+            color: #000000 !important;
             text-decoration: none;
             font-weight: bold;
+        }
+        
+        /* FORZADO: Botones azul oscuro con letras blancas (Alto contraste) */
+        .btn-pedir, button[type="submit"] {
+            background-color: #0056b3 !important;
+            color: #ffffff !important;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-pedir:hover, button[type="submit"]:hover {
+            background-color: #003580 !important;
+        }
+
+        /* FORZADO: Precios en rojo oscuro (Alto contraste) */
+        .precio {
+            color: #a01f10 !important;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -100,10 +115,8 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
-<!-- SEMÁNTICA HTML5 -->
 <main>
-
-    <!-- SECCIÓN SOBRE NOSOTROS (Reubicada antes del menú) -->
+    <!-- SECCIÓN SOBRE NOSOTROS -->
     <section class="container">
         <h2>Sobre Cevichería Mary</h2>
         <p style="font-size: 1.1rem; line-height: 1.6;">
@@ -186,7 +199,6 @@
         </form>
         <div id="feedback"></div>
     </section>
-
 </main>
 
 <footer>
