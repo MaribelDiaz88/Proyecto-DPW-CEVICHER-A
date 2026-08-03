@@ -47,49 +47,26 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <!-- Enlace al CSS (por si acaso) -->
+    <!-- Enlace al CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- ESTILOS FORZADOS PARA ARREGLAR LOS ERRORES DE CONTRASTE DEFINITIVAMENTE -->
+    <!-- ESTILOS FORZADOS PARA ARREGLAR LOS ERRORES DE CONTRASTE -->
     <style>
-        /* Arregla los enlaces vacíos y el texto del WhatsApp */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
         .wa-text { display: inline; margin-left: 5px; }
         .whatsapp-float i { font-size: 1.2rem; }
-        
-        /* FORZADO: Texto negro sobre fondo verde (Arregla el contraste de WAVE) */
-        .whatsapp-float a {
-            color: #000000 !important;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        /* FORZADO: Botones azul oscuro con letras blancas (Alto contraste) */
+        .whatsapp-float a { color: #000000 !important; text-decoration: none; font-weight: bold; }
         .btn-pedir, button[type="submit"] {
             background-color: #0056b3 !important;
             color: #ffffff !important;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
+            border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;
         }
-        .btn-pedir:hover, button[type="submit"]:hover {
-            background-color: #003580 !important;
-        }
-
-        /* FORZADO: Precios en rojo oscuro (Alto contraste) */
-        .precio {
-            color: #a01f10 !important;
-            font-weight: bold;
-            font-size: 1.3em;
-            margin: 10px 0;
-        }
+        .btn-pedir:hover, button[type="submit"]:hover { background-color: #003580 !important; }
+        .precio { color: #a01f10 !important; font-weight: bold; font-size: 1.3em; margin: 10px 0; }
     </style>
 </head>
 <body>
 
-<!-- WhatsApp -->
 <div class="whatsapp-float">
     <a href="https://wa.me/50622223333" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
@@ -120,17 +97,7 @@
     <section class="container">
         <h2>Sobre Cevichería Mary</h2>
         <p style="font-size: 1.1rem; line-height: 1.6;">
-            Desde 2020, llevamos el auténtico sabor del Pacífico costarricense a tu mesa. 
-            Nuestra cevichería familiar se especializa en preparar ceviches frescos y caldosas de pescado 
-            con ingredientes seleccionados cada mañana en el mercado local.
-            <br><br>
-            Creemos que el secreto de un buen plato está en la calidad del producto y en la 
-            tradición de nuestras recetas. Ven a visitarnos y disfruta de nuestra amplia variedad 
-            de platillos marinos: desde el clásico Ceviche Tico hasta nuestra famosa Caldosa de Camarones, 
-            pasando por el Ceviche Naval y nuestro Ceviche Especial de la casa.
-            <br><br>
-            Ideal para almorzar en familia, celebrar ocasiones especiales o pedir a domicilio. 
-            ¡Te esperamos!
+            Desde 2020, llevamos el auténtico sabor del Pacífico costarricense a tu mesa. Nuestra cevichería familiar se especializa en preparar ceviches frescos y caldosas de pescado con ingredientes seleccionados cada mañana en el mercado local. Creemos que el secreto de un buen plato está en la calidad del producto y en la tradición de nuestras recetas. Ven a visitarnos y disfruta de nuestra amplia variedad de platillos marinos: desde el clásico Ceviche Tico hasta nuestra famosa Caldosa de Camarones, pasando por el Ceviche Naval y nuestro Ceviche Especial de la casa. Ideal para almorzar en familia, celebrar ocasiones especiales o pedir a domicilio. ¡Te esperamos!
         </p>
     </section>
 
@@ -139,10 +106,8 @@
         <h2>Nuestros platillos</h2>
 
         <article class="platillo">
-            <picture>
-                <source srcset="img/ceviche-especial.webp" type="image/webp">
-                <img src="img/ceviche-especial.jpg" alt="Ceviche Especial" width="350" height="250">
-            </picture>
+            <!-- CORREGIDO: Usando tu nombre exacto de archivo: ceviche_especial.webp -->
+            <img src="img/ceviche_especial.webp" alt="Ceviche Especial" width="350" height="250">
             <div class="info">
                 <h3>Ceviche Especial</h3>
                 <p>Ceviche preparado con pescado fresco, camarones, calamares, y un toque especial de la casa.</p>
@@ -152,10 +117,8 @@
         </article>
 
         <article class="platillo">
-            <picture>
-                <source srcset="img/ceviche-naval.webp" type="image/webp">
-                <img src="img/ceviche-naval.jpg" alt="Ceviche Naval" width="350" height="250">
-            </picture>
+            <!-- CORREGIDO: Usando tu nombre exacto de archivo con espacio (ceviche 1). El navegador lo lee con %20 -->
+            <img src="img/ceviche%201.webp" alt="Ceviche Naval" width="350" height="250">
             <div class="info">
                 <h3>Ceviche Naval</h3>
                 <p>Delicioso ceviche de pescado y mariscos mixtos con un toque de ajo y perejil.</p>
@@ -165,10 +128,8 @@
         </article>
 
         <article class="platillo">
-            <picture>
-                <source srcset="img/ceviche-tico.webp" type="image/webp">
-                <img src="img/ceviche-tico.jpg" alt="Ceviche Tico" width="350" height="250">
-            </picture>
+            <!-- CORREGIDO: Usando tu nombre exacto de archivo: ceviche_3.webp -->
+            <img src="img/ceviche_3.webp" alt="Ceviche Tico" width="350" height="250">
             <div class="info">
                 <h3>Ceviche Tico</h3>
                 <p>El clásico ceviche costarricense de corvina con limón, cebolla morada, cilantro y salsa de tomate.</p>
@@ -181,7 +142,6 @@
     <!-- SECCIÓN CONTACTO -->
     <section class="container" id="contacto">
         <h2>Contacto</h2>
-        
         <form id="formContacto">
             <div>
                 <label for="nombre">Nombre:</label>
@@ -208,11 +168,7 @@
         <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
     </div>
     <p>&copy; 2026 Cevichería Mary - Todos los derechos reservados</p>
-    <p>Síguenos en redes sociales: 
-        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | 
-        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> | 
-        <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
-    </p>
+    <p>Síguenos en redes sociales: <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> | <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></p>
     <p>Dirección: Av. Principal #123, San José, Costa Rica</p>
 </footer>
 
