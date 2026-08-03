@@ -93,14 +93,31 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
-<!-- SEMÁNTICA HTML5 CORREGIDA: Todo el contenido único va dentro de <main> -->
+<!-- SEMÁNTICA HTML5 -->
 <main>
+
+    <!-- SECCIÓN SOBRE NOSOTROS (Reubicada antes del menú) -->
+    <section class="container">
+        <h2>Sobre Cevichería Mary</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6;">
+            Desde 2020, llevamos el auténtico sabor del Pacífico costarricense a tu mesa. 
+            Nuestra cevichería familiar se especializa en preparar ceviches frescos y caldosas de pescado 
+            con ingredientes seleccionados cada mañana en el mercado local.
+            <br><br>
+            Creemos que el secreto de un buen plato está en la calidad del producto y en la 
+            tradición de nuestras recetas. Ven a visitarnos y disfruta de nuestra amplia variedad 
+            de platillos marinos: desde el clásico Ceviche Tico hasta nuestra famosa Caldosa de Camarones, 
+            pasando por el Ceviche Naval y nuestro Ceviche Especial de la casa.
+            <br><br>
+            Ideal para almorzar en familia, celebrar ocasiones especiales o pedir a domicilio. 
+            ¡Te esperamos!
+        </p>
+    </section>
 
     <!-- SECCIÓN MENÚ -->
     <section class="container" id="menu">
         <h2>Nuestros platillos</h2>
 
-        <!-- Cada platillo ahora es un <article> -->
         <article class="platillo">
             <picture>
                 <source srcset="img/ceviche-especial.webp" type="image/webp">
@@ -141,24 +158,6 @@
         </article>
     </section>
 
-    <!-- SECCIÓN SOBRE NOSOTROS -->
-    <section class="container">
-        <h2>Sobre Cevichería Mary</h2>
-        <p style="font-size: 1.1rem; line-height: 1.6;">
-            Desde 2020, llevamos el auténtico sabor del Pacífico costarricense a tu mesa. 
-            Nuestra cevichería familiar se especializa en preparar ceviches frescos y caldosas de pescado 
-            con ingredientes seleccionados cada mañana en el mercado local.
-            <br><br>
-            Creemos que el secreto de un buen plato está en la calidad del producto y en la 
-            tradición de nuestras recetas. Ven a visitarnos y disfruta de nuestra amplia variedad 
-            de platillos marinos: desde el clásico Ceviche Tico hasta nuestra famosa Caldosa de Camarones, 
-            pasando por el Ceviche Naval y nuestro Ceviche Especial de la casa.
-            <br><br>
-            Ideal para almorzar en familia, celebrar ocasiones especiales o pedir a domicilio. 
-            ¡Te esperamos!
-        </p>
-    </section>
-
     <!-- SECCIÓN CONTACTO -->
     <section class="container" id="contacto">
         <h2>Contacto</h2>
@@ -181,7 +180,7 @@
         <div id="feedback"></div>
     </section>
 
-</main> <!-- Fin de <main> -->
+</main>
 
 <footer>
     <p>Cevichería Mary | Tel: (506) 2222-3333</p>
