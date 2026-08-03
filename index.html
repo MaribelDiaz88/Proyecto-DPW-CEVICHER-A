@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. Título alargado para SEO -->
+    <!-- Título alargado para SEO -->
     <title>Cevichería Mary - La mejor cevichería costarricense con caldosas de pescado, mariscos frescos, ceviches especiales y servicio rápido en San José, Costa Rica</title>
     
     <!-- Etiquetas SEO -->
@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://cevicheria-mary.infinityfreeapp.com/">
     <meta property="og:image" content="https://cevicheria-mary.infinityfreeapp.com/img/logo.jpg">
     
-    <!-- 2. Twitter Cards -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cevichería Mary | Caldosas, Ceviches y Mariscos Frescos en San José">
     <meta name="twitter:description" content="Disfruta de los mejores ceviches costarricenses y caldosas de pescado en Cevichería Mary.">
@@ -32,7 +32,7 @@
     <!-- Verificación Google -->
     <meta name="google-site-verification" content="bh-8MduSjFUyKq14-tV2JIiLR9qJ3JvcGSO4shKWfNs" />
     
-    <!-- 3. SCHEMA JSON-LD -->
+    <!-- SCHEMA JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,19 +61,13 @@
             clip: rect(0,0,0,0);
             border: 0;
         }
-        /* Estilo extra para que el texto "Pedir" del botón de WhatsApp se vea bien */
-        .wa-text {
-            display: inline;
-            margin-left: 5px;
-        }
-        .whatsapp-float i {
-            font-size: 1.2rem;
-        }
+        .wa-text { display: inline; margin-left: 5px; }
+        .whatsapp-float i { font-size: 1.2rem; }
     </style>
 </head>
 <body>
 
-<!-- WhatsApp con texto visible y oculto para accesibilidad -->
+<!-- WhatsApp -->
 <div class="whatsapp-float">
     <a href="https://wa.me/50622223333" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
@@ -84,7 +78,6 @@
 
 <header>
     <div class="header-content">
-        <!-- Logo con etiqueta picture para compatibilidad WebP/JPG -->
         <picture>
             <source srcset="img/logo.webp" type="image/webp">
             <img src="img/logo.jpg" alt="Logo Cevichería Mary" class="logo-header" width="130" height="auto">
@@ -100,88 +93,95 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
-<div class="container" id="menu">
-    <h2>Nuestros platillos</h2>
+<!-- SEMÁNTICA HTML5 CORREGIDA: Todo el contenido único va dentro de <main> -->
+<main>
 
-    <div class="platillo">
-        <!-- Etiqueta picture con WebP y fallback JPG -->
-        <picture>
-            <source srcset="img/ceviche-especial.webp" type="image/webp">
-            <img src="img/ceviche-especial.jpg" alt="Ceviche Especial" width="350" height="250">
-        </picture>
-        <div class="info">
-            <h3>Ceviche Especial</h3>
-            <p>Ceviche preparado con pescado fresco, camarones, calamares, y un toque especial de la casa.</p>
-            <div class="precio">₡8.500</div>
-            <button class="btn-pedir" data-plato="Ceviche Especial">Pedir</button>
-        </div>
-    </div>
+    <!-- SECCIÓN MENÚ -->
+    <section class="container" id="menu">
+        <h2>Nuestros platillos</h2>
 
-    <div class="platillo">
-        <picture>
-            <source srcset="img/ceviche-naval.webp" type="image/webp">
-            <img src="img/ceviche-naval.jpg" alt="Ceviche Naval" width="350" height="250">
-        </picture>
-        <div class="info">
-            <h3>Ceviche Naval</h3>
-            <p>Delicioso ceviche de pescado y mariscos mixtos con un toque de ajo y perejil.</p>
-            <div class="precio">₡7.200</div>
-            <button class="btn-pedir" data-plato="Ceviche Naval">Pedir</button>
-        </div>
-    </div>
+        <!-- Cada platillo ahora es un <article> -->
+        <article class="platillo">
+            <picture>
+                <source srcset="img/ceviche-especial.webp" type="image/webp">
+                <img src="img/ceviche-especial.jpg" alt="Ceviche Especial" width="350" height="250">
+            </picture>
+            <div class="info">
+                <h3>Ceviche Especial</h3>
+                <p>Ceviche preparado con pescado fresco, camarones, calamares, y un toque especial de la casa.</p>
+                <div class="precio">₡8.500</div>
+                <button class="btn-pedir" data-plato="Ceviche Especial">Pedir</button>
+            </div>
+        </article>
 
-    <div class="platillo">
-        <picture>
-            <source srcset="img/ceviche-tico.webp" type="image/webp">
-            <img src="img/ceviche-tico.jpg" alt="Ceviche Tico" width="350" height="250">
-        </picture>
-        <div class="info">
-            <h3>Ceviche Tico</h3>
-            <p>El clásico ceviche costarricense de corvina con limón, cebolla morada, cilantro y salsa de tomate.</p>
-            <div class="precio">₡5.200</div>
-            <button class="btn-pedir" data-plato="Ceviche Tico">Pedir</button>
-        </div>
-    </div>
-</div>
+        <article class="platillo">
+            <picture>
+                <source srcset="img/ceviche-naval.webp" type="image/webp">
+                <img src="img/ceviche-naval.jpg" alt="Ceviche Naval" width="350" height="250">
+            </picture>
+            <div class="info">
+                <h3>Ceviche Naval</h3>
+                <p>Delicioso ceviche de pescado y mariscos mixtos con un toque de ajo y perejil.</p>
+                <div class="precio">₡7.200</div>
+                <button class="btn-pedir" data-plato="Ceviche Naval">Pedir</button>
+            </div>
+        </article>
 
-<!-- NUEVA SECCIÓN: SOBRE NOSOTROS (Para aumentar el contenido de texto) -->
-<div class="container">
-    <h2>Sobre Cevichería Mary</h2>
-    <p style="font-size: 1.1rem; line-height: 1.6;">
-        Desde 2020, llevamos el auténtico sabor del Pacífico costarricense a tu mesa. 
-        Nuestra cevichería familiar se especializa en preparar ceviches frescos y caldosas de pescado 
-        con ingredientes seleccionados cada mañana en el mercado local.
-        <br><br>
-        Creemos que el secreto de un buen plato está en la calidad del producto y en la 
-        tradición de nuestras recetas. Ven a visitarnos y disfruta de nuestra amplia variedad 
-        de platillos marinos: desde el clásico Ceviche Tico hasta nuestra famosa Caldosa de Camarones, 
-        pasando por el Ceviche Naval y nuestro Ceviche Especial de la casa.
-        <br><br>
-        Ideal para almorzar en familia, celebrar ocasiones especiales o pedir a domicilio. 
-        ¡Te esperamos!
-    </p>
-</div>
+        <article class="platillo">
+            <picture>
+                <source srcset="img/ceviche-tico.webp" type="image/webp">
+                <img src="img/ceviche-tico.jpg" alt="Ceviche Tico" width="350" height="250">
+            </picture>
+            <div class="info">
+                <h3>Ceviche Tico</h3>
+                <p>El clásico ceviche costarricense de corvina con limón, cebolla morada, cilantro y salsa de tomate.</p>
+                <div class="precio">₡5.200</div>
+                <button class="btn-pedir" data-plato="Ceviche Tico">Pedir</button>
+            </div>
+        </article>
+    </section>
 
-<div class="container" id="contacto">
-    <h2>Contacto</h2>
-    
-    <form id="formContacto">
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
-        </div>
-        <div>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
-        </div>
-        <div>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" rows="3" placeholder="Escribe tu mensaje aquí" required></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
-    <div id="feedback"></div>
-</div>
+    <!-- SECCIÓN SOBRE NOSOTROS -->
+    <section class="container">
+        <h2>Sobre Cevichería Mary</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6;">
+            Desde 2020, llevamos el auténtico sabor del Pacífico costarricense a tu mesa. 
+            Nuestra cevichería familiar se especializa en preparar ceviches frescos y caldosas de pescado 
+            con ingredientes seleccionados cada mañana en el mercado local.
+            <br><br>
+            Creemos que el secreto de un buen plato está en la calidad del producto y en la 
+            tradición de nuestras recetas. Ven a visitarnos y disfruta de nuestra amplia variedad 
+            de platillos marinos: desde el clásico Ceviche Tico hasta nuestra famosa Caldosa de Camarones, 
+            pasando por el Ceviche Naval y nuestro Ceviche Especial de la casa.
+            <br><br>
+            Ideal para almorzar en familia, celebrar ocasiones especiales o pedir a domicilio. 
+            ¡Te esperamos!
+        </p>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section class="container" id="contacto">
+        <h2>Contacto</h2>
+        
+        <form id="formContacto">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+            </div>
+            <div>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="3" placeholder="Escribe tu mensaje aquí" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="feedback"></div>
+    </section>
+
+</main> <!-- Fin de <main> -->
 
 <footer>
     <p>Cevichería Mary | Tel: (506) 2222-3333</p>
