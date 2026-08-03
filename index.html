@@ -42,11 +42,14 @@
     }
     </script>
     
-       <!-- Favicon y compatibilidad móvil -->
+    <!-- Favicon y compatibilidad móvil -->
     <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- Clase para ocultar texto (Arregla los "Links vacíos" de WAVE) -->
+    
+    <!-- ¡ESTA ES LA LÍNEA QUE FALTABA! (El enlace a tu CSS) -->
+    <link rel="stylesheet" href="css/styles.css">
+    
     <style>
         .sr-only {
             position: absolute;
@@ -88,7 +91,6 @@
     <h2>Nuestros platillos</h2>
 
     <div class="platillo">
-        <!-- 4. Añadidos width y height para evitar el error de CLS -->
         <img src="img/ceviche.jpg" alt="Ceviche Especial" width="350" height="250">
         <div class="info">
             <h3>Ceviche Especial</h3>
@@ -122,7 +124,6 @@
 <div class="container" id="contacto">
     <h2>Contacto</h2>
     
-    <!-- 5. Formulario con etiquetas (Corrige los 5 errores WAVE de "Missing label") -->
     <form id="formContacto">
         <div>
             <label for="nombre">Nombre:</label>
@@ -144,7 +145,6 @@
 <footer>
     <p>Cevichería Mary | Tel: (506) 2222-3333</p>
     <div class="social-icons">
-        <!-- 6. Enlaces externos con texto oculto y enlaces reales -->
         <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i><span class="sr-only">Facebook</span></a>
         <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
     </div>
